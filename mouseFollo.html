@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>follow mouse</title>
+</head>
+<style type="text/css">
+    img{position: absolute;}
+</style>
+<script type="text/javascript">
+    document.onmousemove=function(ev){
+    	//基坐标
+        var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+        var scrollLeft=document.documentElement.scrollLeft||document.body.scrollLeft;
+		//事件
+		var oEvent=ev||event;
+		//目标
+        var oDiv=document.getElementById('huaji');
+		oDiv.style.left=oEvent.clientX+scrollLeft+'px';
+        oDiv.style.top=oEvent.clientY+scrollTop+'px';
+
+    }
+</script>
+<body>
+<img id="huaji" src="001.jpg" />
+</body>
+</html>
